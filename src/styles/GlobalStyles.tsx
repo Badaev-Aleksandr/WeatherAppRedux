@@ -25,6 +25,7 @@ p {
 
 #root {
   display: flex;
+  flex: 1;
   min-height: 100%;
 }
 `;

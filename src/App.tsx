@@ -1,10 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
+import Layout from "./Layout/Layout"
+import Home from "./pages/Home/Home"
+import History from "./pages/History/History"
+
 const App = () => {
   return (
-  <BrowserRouter>
-  WeatherApp
-  </BrowserRouter>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   )
 }
 
