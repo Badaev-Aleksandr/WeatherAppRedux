@@ -1,6 +1,5 @@
 import Button from "../Button/Button"
 import {
-  ButtonCard,
   ButtonsContainer,
   ButtonWrapper,
   CytiName,
@@ -27,10 +26,10 @@ function WeatherCard({ temp, cytiName, weatherImgURL }: WeatherCardProps) {
       </ResultSearch>
       <ButtonsContainer>
         <ButtonWrapper>
-          <ButtonCard name="Save" />
+          <Button name="Save" isButtonCard={true} />
         </ButtonWrapper>
         <ButtonWrapper>
-          <ButtonCard name="Delete" />
+          <Button name="Delete" isButtonCard={true} />
         </ButtonWrapper>
       </ButtonsContainer>
     </WeatherCardWrapper>

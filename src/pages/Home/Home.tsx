@@ -1,26 +1,26 @@
 import Button from "../../components/Button/Button"
 import Input from "../../components/Input/Input"
 import WeatherCard from "../../components/WeatherCard/WeatherCard"
-import { HomePageWrapper, SearchContainer, SearchForm } from "./styles"
+import { ButtonWrapper, HomePageWrapper, SearchForm } from "./styles"
 import Weather from "../../assets/weather.png"
 
 function Home() {
   const weatherCard = "Card"
   return (
     <HomePageWrapper>
-      <SearchContainer>
         <SearchForm onSubmit={() => {}}>
           <Input
             name="cytiSearch"
             placeholder="Enter Cyti"
             onChange={() => {}}
             value=""
-            error=""
+            error="{true}"
           />
-          <Button name="Search" />
+          <ButtonWrapper>
+            <Button name="Search" />
+          </ButtonWrapper>
         </SearchForm>
-      </SearchContainer>
-      <WeatherCard temp="" weatherImgURL={Weather} cytiName=""/>
+      <WeatherCard temp="" weatherImgURL={Weather} cytiName="" />
     </HomePageWrapper>
   )
 }

@@ -21,8 +21,18 @@ function Layout({ children }: LayoutProps) {
           <HeaderLabelContent>Weather App</HeaderLabelContent>
         </HeaderLabelContainer>
         <NavContainer>
-          <StyledNavLink to="/">Home</StyledNavLink>
-          <StyledNavLink to="/history">History</StyledNavLink>
+          <StyledNavLink style={
+            ({isActive})=>({
+              fontWeight: isActive? "700" : "400" 
+            })
+          } to="/">Home</StyledNavLink>
+          <StyledNavLink style={
+            ({isActive})=>({
+              fontWeight: isActive? "700" : "400"
+            })
+          }
+          
+          to="/history">History</StyledNavLink>
         </NavContainer>
       </Header>
       <Main>{children}</Main>

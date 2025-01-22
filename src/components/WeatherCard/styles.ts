@@ -13,6 +13,7 @@ export const WeatherCardWrapper = styled.div`
     rgba(47, 72, 111, 0.62) 5.78%,
     rgba(11, 27, 52, 0.62) 96.58%
   );
+  backdrop-filter: blur(8px);
   font-family: "Inter", sans-serif;
 `
 
@@ -63,7 +64,4 @@ export const ButtonsContainer = styled.div`
 
 export const ButtonWrapper = styled.div`
   width: 155px;
-`
-
-export const ButtonCard = styled(Button)`
 `

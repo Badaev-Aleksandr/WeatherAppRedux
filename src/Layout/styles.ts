@@ -25,6 +25,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 
 export const HeaderLabelContainer = styled.div`
 cursor: pointer;
+margin-left: 85px;
 `
 
 export const HeaderLabelContent = styled.div`
@@ -39,7 +40,13 @@ color: #FFFFFF;
 
 `
 
-export const NavContainer = styled.nav``
+export const NavContainer = styled.nav`
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 63px;
+margin-right: 107px;
+`
 
 export const Main = styled.main`
 display: flex;
@@ -48,4 +55,13 @@ justify-content: center;
 
 `
 
-export const StyledNavLink = styled(NavLink)``
+export const StyledNavLink = styled(NavLink)`
+font-family: 'Inter';
+font-size: 20px;
+font-weight: 400;
+line-height: 24.2px;
+text-underline-position: from-font;
+text-decoration: none;
+color: #FFFFFF;
+
+`
