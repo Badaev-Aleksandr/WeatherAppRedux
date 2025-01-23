@@ -1,6 +1,4 @@
 import styled from "@emotion/styled"
-import Button from "../Button/Button"
-import { MainButton } from "../Button/styles"
 
 export const WeatherCardWrapper = styled.div`
   display: flex;
@@ -15,6 +13,43 @@ export const WeatherCardWrapper = styled.div`
   );
   backdrop-filter: blur(8px);
   font-family: "Inter", sans-serif;
+`
+
+export const WeatherCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const ErrorCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+`
+
+export const ErrorContent = styled.div`
+  font-family: "Inter";
+  font-size: 57px;
+  font-weight: 500;
+  line-height: 68.98px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #f35e5e;
+`
+
+export const ErrorMassage = styled.div`
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  text-align: center;
+  margin: 6px 0 11px 0;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
 `
 
 export const ResultSearch = styled.div`
@@ -56,12 +91,23 @@ export const WeatherImg = styled.img`
 `
 
 export const ButtonsContainer = styled.div`
+  
+`
+
+export const ButtonWrapper = styled.div`
+  width: 155px;
+`
+export const HomeWeatherCadr = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 160px 14px 160px;
   height: 48px;
 `
 
-export const ButtonWrapper = styled.div`
-  width: 155px;
+export const HistoryWeatherCard = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 14px;
 `

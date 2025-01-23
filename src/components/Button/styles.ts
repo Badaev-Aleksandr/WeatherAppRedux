@@ -1,17 +1,19 @@
 import styled from "@emotion/styled"
 
 interface ButtonProps {
-  isButtonCard: boolean
+  isWeatherCard: boolean
 }
 
 export const MainButton = styled.button<ButtonProps>`
   width: 100%;
   padding: 12px 40px;
   border-radius: 50px;
-  border: ${({isButtonCard})=>(isButtonCard ? " 1px solid #FFFFFF" : "none")};
+  border: ${({ isWeatherCard }) =>
+    isWeatherCard ? " 1px solid #FFFFFF" : "none"};
   outline: none;
   gap: 10px;
-  background-color: ${({isButtonCard})=>(isButtonCard ? "transparent" : "#3678b4")};
+  background-color: ${({ isWeatherCard }) =>
+    isWeatherCard ? "transparent" : "#3678b4"};
   font-family: "Inter";
   font-size: 20px;
   font-weight: 400;

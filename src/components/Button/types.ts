@@ -1,9 +1,9 @@
-type ButtonType = "button" | "submit" | "reset";
+type ButtonType = "button" | "submit" | "reset"
 
 export interface ButtonProps {
-  name: string;
-  type?: ButtonType;
-  onClick?: () => void;
+  name: string
+  type?: ButtonType
+  onClick?: () => void
   disabled?: boolean
-  isButtonCard: boolean
+  isWeatherCard: boolean 
 }
