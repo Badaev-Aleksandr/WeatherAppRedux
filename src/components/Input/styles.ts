@@ -27,14 +27,13 @@ export const InputElement = styled.input`
     font-size: 20px;
     font-weight: 300;
     line-height: 24.2px;
-    color: #ffffff ;
+    color: #ffffff;
   }
-  &:focus{
+  &:focus {
     font-size: 20px;
     font-weight: 600;
     line-height: 24.2px;
-   outline: none;
+    outline: none;
     color: #ffffff;
-   
   }
 `

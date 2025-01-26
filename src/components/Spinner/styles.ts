@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
 export const SpinnerWrapper = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ export const SpinnerWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-`;
+`
 
 export const SpinnerElement = styled.div`
   border: 10px solid rgba(0, 0, 0, 0.1);
@@ -24,4 +24,4 @@ export const SpinnerElement = styled.div`
       transform: rotate(360deg);
     }
   }
-`;
+`

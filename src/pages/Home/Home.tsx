@@ -53,7 +53,9 @@ function Home() {
           isHomeCard={true}
         />
       )}
-      {status === "error" && <WeatherCard isHomeCard={true} isError={true} error={error} />}
+      {status === "error" && (
+        <WeatherCard isHomeCard={true} isError={true} error={error} />
+      )}
     </HomePageWrapper>
   )
 }

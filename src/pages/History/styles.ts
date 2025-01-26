@@ -20,17 +20,17 @@ export const HistoryWrapper = styled.div`
 `
 
 export const HistoryCardsWrapper = styled.div`
-display: flex;
-flex-direction: column;
-gap: 80px;
-overflow: auto;
-scrollbar-width: none;
--ms-overflow-style: none;
-height: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  height: 560px;
 
-&::-webkit-scrollbar{
-display: none;
-}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const ButtonWrapper = styled.div``
