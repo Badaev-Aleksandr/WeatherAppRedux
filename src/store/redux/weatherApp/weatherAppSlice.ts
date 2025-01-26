@@ -59,6 +59,7 @@ export const weatherAppSlice = createAppSlice({
         !state.data.find(weather => weather.id === state.searchResult?.id)
       ) {
         state.data = [...state.data, state.searchResult]
+        state.searchResult = null
       }
     }),
     deleteCard: create.reducer(
