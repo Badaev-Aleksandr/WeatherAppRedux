@@ -81,18 +81,21 @@ export const CytiName = styled.div`
 `
 
 export const ImgContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 290px;
   height: 74px;
   margin: 28px 127px 0 0;
 `
 
 export const WeatherImg = styled.img`
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 `
 
-export const ButtonsContainer = styled.div`
-  
-`
+export const ButtonsContainer = styled.div``
 
 export const ButtonWrapper = styled.div`
   width: 155px;

@@ -5,20 +5,45 @@ import {
   HistoryPageWrapper,
   HistoryWrapper,
 } from "./styles"
+import {
+  weatherSliceActions,
+  weatherSliceSelectors,
+} from "store/redux/weatherApp/weatherAppSlice"
+import { useAppDispatch, useAppSelector } from "store/hooks"
+import type { WeatherData } from "store/redux/weatherApp/types"
+import { WeatherCardWrapper } from "components/WeatherCard/styles"
 
 function History() {
-  const weatherCards = true
+  const dispatch = useAppDispatch()
+  const { data } = useAppSelector(weatherSliceSelectors.wetherData)
+  const weatherCards = data.map((weather: WeatherData) => {
+    return (
+      <WeatherCardWrapper key={weather.id}>
+        <WeatherCard
+          isHomeCard={false}
+          isError={false}
+          weatherId={weather.id}
+          temp={weather.temp}
+          cytiName={weather.cityName}
+          weatherImgURL={weather.iconURL}
+        />
+      </WeatherCardWrapper>
+    )
+  })
+  const deleteAllCards = () => {
+    dispatch(weatherSliceActions.deleteAllCards())
+  }
+
   return (
     <HistoryPageWrapper>
-      {weatherCards && (
+      {data.length > 0 && (
         <HistoryWrapper>
-          <HistoryCardsWrapper>
-          <WeatherCard temp="" weatherImgURL={""} cytiName="" isError={false} error="" isHomeCard={false}/>
-          <WeatherCard temp="" weatherImgURL={""} cytiName="" isError={false} error="" isHomeCard={false}/>
-          <WeatherCard temp="" weatherImgURL={""} cytiName="" isError={false} error="" isHomeCard={false}/>
-          <WeatherCard temp="" weatherImgURL={""} cytiName="" isError={false} error="" isHomeCard={false}/>
-          </HistoryCardsWrapper>
-            <Button name="Delete all cards" isWeatherCard={false} />
+          <HistoryCardsWrapper>{weatherCards}</HistoryCardsWrapper>
+          <Button
+            name="Delete all cards"
+            isWeatherCard={false}
+            onClick={deleteAllCards}
+          />
         </HistoryWrapper>
       )}
     </HistoryPageWrapper>

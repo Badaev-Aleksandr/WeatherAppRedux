@@ -1,8 +1,9 @@
 export interface WeatherCardProps {
-  temp: string
-  cytiName: string
-  weatherImgURL: string
-  isError: boolean
-  error: string
+  temp?: number | undefined
+  cytiName?: string
+  weatherImgURL?: string | undefined
+  weatherId?: number | undefined
+  isError?: boolean
+  error?: string
   isHomeCard:boolean
 }
