@@ -25,8 +25,16 @@ export const InputElement = styled.input`
   height: 48px;
   &::placeholder {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
     line-height: 24.2px;
     color: #ffffff ;
+  }
+  &:focus{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+   outline: none;
+    color: #ffffff;
+   
   }
 `
