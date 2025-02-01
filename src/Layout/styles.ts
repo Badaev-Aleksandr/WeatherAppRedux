@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { NavLink } from "react-router-dom"
 import BackgroundImage from "../assets/pic_2.png"
 
 export const LayoutWrapper = styled.div`
@@ -41,26 +40,8 @@ export const HeaderLabelContent = styled.div`
   color: #ffffff;
 `
 
-export const NavContainer = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 63px;
-  margin-right: 107px;
-`
-
 export const Main = styled.main`
   display: flex;
   flex: 1;
   justify-content: center;
-`
-
-export const StyledNavLink = styled(NavLink)`
-  font-family: "Inter";
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24.2px;
-  text-underline-position: from-font;
-  text-decoration: none;
-  color: #ffffff;
 `

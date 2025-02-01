@@ -5,7 +5,7 @@ import type { PayloadAction } from "@reduxjs/toolkit"
 
 const weatherAppInitialState: WeatherAppState = {
   data: [],
-  searchResult: null,
+  searchResult: undefined,
   error: undefined,
   status: "default",
 }
@@ -50,16 +50,16 @@ export const weatherAppSlice = createAppSlice({
       },
     ),
     deleteSearchResultCard: create.reducer((state: WeatherAppState) => {
-      state.searchResult = null
+      state.searchResult = undefined
       state.status = "default"
     }),
     saveCard: create.reducer((state: WeatherAppState) => {
       if (
-        state.searchResult !== null &&
+        state.searchResult !== undefined &&
         !state.data.find(weather => weather.id === state.searchResult?.id)
       ) {
         state.data = [...state.data, state.searchResult]
-        state.searchResult = null
+        state.searchResult = undefined
       }
     }),
     deleteCard: create.reducer(

@@ -11,6 +11,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/history" element={<History />} />
+          <Route path="*" element="Page not found" />
         </Routes>
       </Layout>
     </BrowserRouter>

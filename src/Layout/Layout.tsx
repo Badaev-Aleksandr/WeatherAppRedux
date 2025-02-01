@@ -5,10 +5,9 @@ import {
   HeaderLabelContent,
   LayoutWrapper,
   Main,
-  NavContainer,
-  StyledNavLink,
 } from "./styles"
 import type { LayoutProps } from "./types"
+import Navigation from "components/Navigation/Navigation"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()
@@ -20,20 +19,7 @@ function Layout({ children }: LayoutProps) {
         <HeaderLabelContainer onClick={goToHomePage}>
           <HeaderLabelContent>Weather App</HeaderLabelContent>
         </HeaderLabelContainer>
-        <NavContainer>
-          <StyledNavLink style={
-            ({isActive})=>({
-              fontWeight: isActive? "700" : "400" 
-            })
-          } to="/">Home</StyledNavLink>
-          <StyledNavLink style={
-            ({isActive})=>({
-              fontWeight: isActive? "700" : "400"
-            })
-          }
-          
-          to="/history">History</StyledNavLink>
-        </NavContainer>
+        <Navigation />
       </Header>
       <Main>{children}</Main>
     </LayoutWrapper>

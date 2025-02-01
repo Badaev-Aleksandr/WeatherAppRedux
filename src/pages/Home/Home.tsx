@@ -45,7 +45,7 @@ function Home() {
         </ButtonWrapper>
       </SearchForm>
       {status === "loading" && <Spinner />}
-      {status === "success" && searchResult !== null && (
+      {status === "success" && searchResult !== undefined && (
         <WeatherCard
           temp={searchResult.temp}
           weatherImgURL={searchResult.iconURL}

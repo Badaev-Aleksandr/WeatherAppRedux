@@ -7,7 +7,7 @@ export interface WeatherData {
 
 export interface WeatherAppState {
   data: WeatherData[]
-  searchResult: WeatherData | null
+  searchResult: WeatherData | undefined
   error: any
   status: "default" | "loading" | "success" | "error"
 }
